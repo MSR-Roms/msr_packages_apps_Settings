@@ -61,7 +61,7 @@
     <application android:label="@string/settings_label"
             android:icon="@mipmap/ic_launcher_settings"
             android:taskAffinity=""
-            android:theme="@android:style/Theme.Holo.Light"
+            android:theme="@android:style/Theme.Holo"
             android:uiOptions="splitActionBarWhenNarrow"
             android:hardwareAccelerated="true">
 
