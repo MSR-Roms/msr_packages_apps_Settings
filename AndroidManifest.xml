@@ -274,6 +274,8 @@
                 android:resource="@id/bluetooth_settings" />
         </activity>
 
+       <activity android:name="net.margaritov.preference.colorpicker" />
+
         <!-- Keep compatibility with old shortcuts. -->
         <activity-alias android:name=".bluetooth.BluetoothSettings"
                 android:label="@string/bluetooth_settings_title"

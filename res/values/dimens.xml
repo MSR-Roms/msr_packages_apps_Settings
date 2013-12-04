@@ -59,5 +59,7 @@
 
 	<!-- Light settings dialog -->
     <dimen name="dialog_light_settings_width">400dip</dimen>
+    <!-- Notification Shortcuts -->
+    <dimen name="notification_shortcut_picker_left_padding">36dip</dimen>
 
 </resources>

@@ -4159,7 +4159,7 @@
     <!-- Cell Broadcast settings description [CHAR LIMIT=100] -->
     <string name="cell_broadcast_settings_summary">Select the types of emergency alerts to display.</string>
 
-    <!-- CYANOGENMOD EDITS START -->
+    <!-- MSR EDITS START -->
 
     <!-- Wifi sleep timeout -->
     <string name="wifi_idle_mn_title">Wi-Fi idle timeout</string>
@@ -4977,6 +4977,19 @@
     <string name="gestures_action_menu">Emulate Menu key</string>
     <string name="gestures_action_search">Invoke search</string>
     <string name="gestures_action_recent">Recent applications</string>
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on Color to apply</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#FF000000</string>
+    <string name="set">Set</string>
+    <string name="ics_color">Holo</string>
+    <!-- Header -->
+    <string name="notification_drawer_category_title">Notification drawer</string>
+    <string name="custom_statusbar_header_title">Contextual notification panel header</string>
+    <string name="custom_statusbar_header_summary">Sets the background of the notification panel header to an image based on the current date and time</string>
 
-    <!-- **** CYANOGENMOD ADDITIONS END **** -->
+    <!-- **** MSR ADDITIONS END **** -->
 </resources>

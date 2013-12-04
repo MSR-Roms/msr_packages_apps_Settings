@@ -41,6 +41,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String COMBINED_BAR_AUTO_HIDE = "combined_bar_auto_hide";
     private static final String STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
     private static final String STATUS_BAR_CATEGORY_GENERAL = "status_bar_general";
+    private static final String STATUS_BAR_CUSTOM_HEADER = "custom_status_bar_header";
 
     private ListPreference mStatusBarAmPm;
     private ListPreference mStatusBarBattery;
@@ -49,6 +50,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private CheckBoxPreference mStatusBarBrightnessControl;
     private CheckBoxPreference mCombinedBarAutoHide;
     private CheckBoxPreference mStatusBarNotifCount;
+    private CheckBoxPreference mStatusBarCustomHeader;
     private PreferenceCategory mPrefCategoryGeneral;
 
     @Override
@@ -114,6 +116,10 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusBarNotifCount.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
                 Settings.System.STATUS_BAR_NOTIF_COUNT, 0) == 1));
 
+        mStatusBarCustomHeader = (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_CUSTOM_HEADER);
+        mStatusBarCustomHeader.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+            Settings.System.STATUS_BAR_CUSTOM_HEADER, 0) == 1));
+
         mPrefCategoryGeneral = (PreferenceCategory) findPreference(STATUS_BAR_CATEGORY_GENERAL);
 
         if (Utils.isTablet(getActivity())) {
@@ -163,10 +169,10 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL, value ? 1 : 0);
             return true;
-        } else if (preference == mCombinedBarAutoHide) {
-            value = mCombinedBarAutoHide.isChecked();
+        } else if (preference == mStatusBarCustomHeader) {
+            value = mStatusBarCustomHeader.isChecked();
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.COMBINED_BAR_AUTO_HIDE, value ? 1 : 0);
+                Settings.System.STATUS_BAR_CUSTOM_HEADER, value ? 1 : 0);
             return true;
         } else if (preference == mStatusBarNotifCount) {
             value = mStatusBarNotifCount.isChecked();
