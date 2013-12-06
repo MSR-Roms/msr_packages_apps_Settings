@@ -21,6 +21,13 @@
     <PreferenceCategory
        android:title="@string/power_widget_title">
 
+        <ListPreference
+            android:key="toggles_style"
+            android:dialogTitle="@string/toggles_style_title"
+            android:title="@string/toggles_style_title"
+            android:entries="@array/toggles_style_entries"
+            android:entryValues="@array/toggles_style_values" />
+<!--
         <CheckBoxPreference
             android:key="expanded_widget"
             android:title="@string/title_expanded_widget"
@@ -33,12 +40,11 @@
             android:dependency="expanded_widget"
             android:fragment="com.android.settings.cyanogenmod.PowerWidget$PowerWidgetChooser">
         </PreferenceScreen>
-
+-->
         <PreferenceScreen
             android:key="widget_order"
             android:title="@string/title_widget_order"
             android:summary="@string/summary_widget_order"
-            android:dependency="expanded_widget"
             android:fragment="com.android.settings.cyanogenmod.PowerWidget$PowerWidgetOrder">
         </PreferenceScreen>
 
@@ -48,24 +54,27 @@
        android:title="@string/power_widget_behavior">
 
         <CheckBoxPreference
+            android:key="expanded_hide_oncollapse"
+            android:title="@string/title_expanded_hide_oncollapse"
+            android:summary="@string/summary_expanded_hide_oncollapse"
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
             android:key="expanded_hide_onchange"
             android:title="@string/title_expanded_hide_onchange"
-            android:defaultValue="false"
-            android:dependency="expanded_widget" />
+            android:defaultValue="false" />
 
         <CheckBoxPreference
             android:key="expanded_hide_scrollbar"
             android:title="@string/title_expanded_hide_scrollbar"
-            android:defaultValue="false"
-            android:dependency="expanded_widget" />
+            android:defaultValue="false" />
 
         <ListPreference
             android:key="expanded_haptic_feedback"
             android:dialogTitle="@string/expanded_haptic_feedback_title"
             android:title="@string/expanded_haptic_feedback_title"
             android:entries="@array/haptic_feedback_entries"
-            android:entryValues="@array/haptic_feedback_values"
-            android:dependency="expanded_widget" />
+            android:entryValues="@array/haptic_feedback_values" />
 
     </PreferenceCategory>
 
