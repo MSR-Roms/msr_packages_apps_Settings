@@ -33,6 +33,8 @@ import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.preference.PreferenceCategory;
+import android.preference.PreferenceGroup;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.view.Display;

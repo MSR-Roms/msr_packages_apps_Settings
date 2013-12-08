@@ -25,7 +25,7 @@
         </PreferenceScreen> -->
 
 
-	<PreferenceScreen android:layout="@layout/msr" android:title="" />
+	<PreferenceScreen android:key="msr_version" android:layout="@layout/msr" android:title="" />
 
         <PreferenceScreen android:key="additional_system_update_settings"
                           android:title="@string/additional_system_update_settings_list_item_title">

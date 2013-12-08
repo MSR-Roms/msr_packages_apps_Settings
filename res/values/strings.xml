@@ -4996,5 +4996,9 @@
     <string name="custom_statusbar_header_summary">Sets the background of the notification panel header to an image based on the current date and time</string>
     <string name="title_expanded_hide_oncollapse">Collapse volumes</string>
     <string name="summary_expanded_hide_oncollapse">Collapse the volume panel when notifcation panel is closed</string>
+  
+    <!-- Network speed -->
+    <string name="show_network_speed">Network speed indicator</string>
+    <string name="show_network_speed_summary">Show network speed in statusbar</string>
     <!-- **** MSR ADDITIONS END **** -->
 </resources>
