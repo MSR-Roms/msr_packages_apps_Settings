@@ -4742,11 +4742,11 @@
 
     <!-- Anonymous Statistics  -->
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">CyanogenMod statistics</string>
-    <string name="anonymous_statistics_summary">Help make CyanogenMod better by opting into anonymous statistics reporting</string>
+    <string name="anonymous_statistics_title">MSR-Roms statistics</string>
+    <string name="anonymous_statistics_summary">Help make MSR-Roms better by opting into anonymous statistics reporting</string>
     <string name="anonymous_statistics_warning_title">About</string>
-    <string name="anonymous_statistics_warning">Opting into CyanogenMod statistics will allow non-personal data to be submitted to the
-        developers of CyanogenMod to track unique installations across devices. The information submitted includes an unique identifier,
+    <string name="anonymous_statistics_warning">Opting into MSR-Roms statistics will allow non-personal data to be submitted to the
+        developers of MSR-Rom to track unique installations across devices. The information submitted includes an unique identifier,
         which does not compromise your privacy or personal data. The data is submitted during each boot.\n\nFor an example of the data that is submitted, tap on Preview Data.</string>
     <string name="enable_reporting_title">Enable reporting</string>
     <string name="preview_data_title">Preview data</string>
@@ -4981,6 +4981,7 @@
     <string name="gestures_action_menu">Emulate Menu key</string>
     <string name="gestures_action_search">Invoke search</string>
     <string name="gestures_action_recent">Recent applications</string>
+
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on Color to apply</string>
@@ -4990,6 +4991,7 @@
     <string name="hex_hint">#FF000000</string>
     <string name="set">Set</string>
     <string name="ics_color">Holo</string>
+
     <!-- Header -->
     <string name="notification_drawer_category_title">Notification drawer</string>
     <string name="custom_statusbar_header_title">Contextual notification panel header</string>
@@ -5000,6 +5002,7 @@
     <!-- Network speed -->
     <string name="show_network_speed">Network speed indicator</string>
     <string name="show_network_speed_summary">Show network speed in statusbar</string>
+
     <!-- ListView animation -->
     <string name="bars_and_menus_category_system_title">System</string>
     <string name="listview_animation_title">ListView Animation</string>
@@ -5024,5 +5027,18 @@
     <string name="listview_overshoot_interpolator">Overshoot</string>
     <string name="listview_anticipate_overshoot_interpolator">Anticipate and overshoot</string>
     <string name="listview_bounce_interpolator">Bounce</string>
+
+    <!-- QuickerPanel -->
+    <string name="status_bar_quicker_panel">Enable Quick Panel View</string>
+    <string name="status_bar_quicker_panel_summary">This Option enables/disables the 4.2.2 Quick Panel View</string>
+    <string name="quickerpanelwidget">Quick Panel Widget</string>
+    <string name="quickerpanelwidgetsummary">Enable or Disable the QuickPanel Toggles</string>
+
+    <!-- Lockscreen stylers -->
+    <string name="pref_lockscreen_style_title">Lockscreen style</string>
+    <string name="pref_lockscreen_style_summary">Choose your style of lockscreen</string>
+    <string name="apply">Apply</string>
+    <string name="item_count">%1$d/%2$d</string>
+    <string name="okay">Okay</string>
     <!-- **** MSR ADDITIONS END **** -->
 </resources>

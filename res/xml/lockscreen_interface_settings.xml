@@ -17,6 +17,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/themes_settings_title" >
 
+    <PreferenceScreen
+            android:key="pref_lockscreen_style"
+            android:title="@string/pref_lockscreen_style_title"
+            android:summary="@string/pref_lockscreen_style_summary"
+            android:fragment="com.android.settings.cyanogenmod.LockscreenStyle">
+    </PreferenceScreen>
+
      <PreferenceScreen
          android:key="screen_security"
          android:fragment="com.android.settings.SecuritySettings"
