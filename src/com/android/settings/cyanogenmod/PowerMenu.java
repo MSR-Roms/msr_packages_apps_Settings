@@ -21,11 +21,16 @@ import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.preference.ListPreference;
+import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.PreferenceCategory;
+import android.provider.Settings.SettingNotFoundException;
+import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class PowerMenu extends SettingsPreferenceFragment {
+public class PowerMenu extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
     private static final String TAG = "PowerMenu";
 
     private static final String KEY_REBOOT = "power_menu_reboot";
@@ -34,7 +39,11 @@ public class PowerMenu extends SettingsPreferenceFragment {
     private static final String KEY_PROFILES = "power_menu_profiles";
     private static final String KEY_AIRPLANE = "power_menu_airplane";
     private static final String KEY_SILENT = "power_menu_silent";
+    private static final String POM_SCREENSHOT_SOUND = "pom_screenshot_sound";
+    private static final String POM_SCREENSHOT_DELAY = "pom_screenshot_delay";
 
+    private CheckBoxPreference mScreenshotSound;
+    private ListPreference mScreenshotDelay;
     private CheckBoxPreference mRebootPref;
     private CheckBoxPreference mScreenshotPref;
     private CheckBoxPreference mExpandedDesktopPref;
@@ -48,6 +57,19 @@ public class PowerMenu extends SettingsPreferenceFragment {
 
         addPreferencesFromResource(R.xml.power_menu_settings);
 
+        PreferenceScreen prefSet = getPreferenceScreen();
+
+        mScreenshotSound = (CheckBoxPreference) prefSet.findPreference(POM_SCREENSHOT_SOUND);
+        mScreenshotDelay = (ListPreference) prefSet.findPreference(POM_SCREENSHOT_DELAY);
+
+        mScreenshotSound.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.SCREENSHOT_SOUND, 1) == 1));
+
+        int screenshotDelay = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.SCREENSHOT_DELAY, 1000);
+        mScreenshotDelay.setValue(String.valueOf(screenshotDelay));
+
+        mScreenshotDelay.setOnPreferenceChangeListener(this);
         mRebootPref = (CheckBoxPreference) findPreference(KEY_REBOOT);
         mRebootPref.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.POWER_MENU_REBOOT_ENABLED, 1) == 1));
@@ -87,11 +109,27 @@ public class PowerMenu extends SettingsPreferenceFragment {
 
     }
 
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mScreenshotDelay) {
+            int screenshotDelay = Integer.valueOf((String) newValue);
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.SCREENSHOT_DELAY, screenshotDelay);
+            return true;
+        }
+
+        return true;
+    }
+
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         boolean value;
 
-        if (preference == mScreenshotPref) {
+        if (preference == mScreenshotSound) {
+            value = mScreenshotSound.isChecked();
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.SCREENSHOT_SOUND, value ? 1 : 0);
+            return true;
+        } else if (preference == mScreenshotPref) {
             value = mScreenshotPref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.POWER_MENU_SCREENSHOT_ENABLED,

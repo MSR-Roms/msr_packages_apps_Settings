@@ -72,4 +72,10 @@
         android:fragment="com.android.settings.cyanogenmod.HardwareKeys"
         android:title="@string/hardware_keys_title" />
 
+    <CheckBoxPreference
+        android:key="show_navbar"
+        android:title="@string/show_navbar"
+        android:summary="@string/show_navbar_reboot"
+        android:defaultValue="false" />
+
 </PreferenceScreen>

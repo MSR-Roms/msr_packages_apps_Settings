@@ -49,4 +49,23 @@
         android:title="@string/power_menu_silent_title"
         android:defaultValue="true" />
 
+    <PreferenceCategory
+        android:title="@string/pom_screenshot_title">
+
+       <CheckBoxPreference
+            android:key="pom_screenshot_sound"
+            android:title="@string/pom_screenshot_sound_title"
+            android:summary="@string/pom_screenshot_sound_summary"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="pom_screenshot_delay"
+            android:dialogTitle="@string/pom_screenshot_delay_title"
+            android:title="@string/pom_screenshot_delay_title"
+            android:summary="@string/pom_screenshot_delay_summary"
+            android:entries="@array/pom_screenshot_delay_entries"
+            android:entryValues="@array/pom_screenshot_delay_values"
+            android:defaultValue="1000" />
+
+    </PreferenceCategory>
 </PreferenceScreen>

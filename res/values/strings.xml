@@ -5040,5 +5040,11 @@
     <string name="apply">Apply</string>
     <string name="item_count">%1$d/%2$d</string>
     <string name="okay">Okay</string>
+
+    <string name="pom_screenshot_title">Screenshot</string>
+    <string name="pom_screenshot_sound_title">Screenshot sound</string>
+    <string name="pom_screenshot_sound_summary">Plays sound effect when screenshot is taken</string>
+    <string name="pom_screenshot_delay_title">Screenshot delay</string>
+    <string name="pom_screenshot_delay_summary">Delays shot by number of seconds specified</string>
     <!-- **** MSR ADDITIONS END **** -->
 </resources>

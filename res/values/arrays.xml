@@ -1610,5 +1610,24 @@
         <item>@drawable/lock_honey</item>
         <item>@drawable/lock_sense</item>
     </array>
+
+   <string-array name="pom_screenshot_delay_entries">
+       <item>1 second</item>
+       <item>2 seconds</item>
+       <item>3 seconds</item>
+       <item>4 seconds</item>
+       <item>5 seconds</item>
+       <item>6 seconds</item>
+       <item>7 seconds</item>
+   </string-array>
+   <string-array name="pom_screenshot_delay_values">
+       <item>1000</item>
+       <item>2000</item>
+       <item>3000</item>
+       <item>4000</item>
+       <item>5000</item>
+       <item>6000</item>
+       <item>7000</item>
+   </string-array>
     <!-- **** CYANOGENMOD EDITS END **** -->
 </resources>
